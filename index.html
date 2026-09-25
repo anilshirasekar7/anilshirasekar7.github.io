@@ -1,97 +1,405 @@
-<!DOCTYPE HTML>
-<!--
-	Identity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Anil Shirasekar - Senior Software Developer</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<!--<link rel="fluid-icon" href="images/user_male_circle_filled1600.png" title="GitHub">-->
-		<link rel="icon" href="favicon.png" type=" image/png" />
-	</head>
-	<body class="is-loading">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anil Shirasekar — SVP of Software Engineering, Travel Platform</title>
+<meta name="description" content="Anil Shirasekar — SVP of Software Engineering leading the consumer travel flight-booking platform at JPMorgan Chase. 15 years building at scale. .NET · AWS · AI adoption." />
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-				<!-- Main -->
-					<section id="main">
-						<header>
-							<span class="avatar"><img src="images/profile-anilshirasekar.jpg" alt="" /></span>
-							<h1>Anil Shirasekar</h1>
-							<p>Senior Software Developer</p>
-						</header>
-						<!--
-						<hr />
-						<h2>Extra Stuff!</h2>
-						<form method="post" action="#">
-							<div class="field">
-								<input type="text" name="name" id="name" placeholder="Name" />
-							</div>
-							<div class="field">
-								<input type="email" name="email" id="email" placeholder="Email" />
-							</div>
-							<div class="field">
-								<div class="select-wrapper">
-									<select name="department" id="department">
-										<option value="">Department</option>
-										<option value="sales">Sales</option>
-										<option value="tech">Tech Support</option>
-										<option value="null">/dev/null</option>
-									</select>
-								</div>
-							</div>
-							<div class="field">
-								<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
-							</div>
-							<div class="field">
-								<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
-							</div>
-							<div class="field">
-								<label>But are you a robot?</label>
-								<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
-								<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
-							</div>
-							<ul class="actions">
-								<li><a href="#" class="button">Get Started</a></li>
-							</ul>
-						</form>
-						<hr />
-						-->
-						<footer>
-							<ul class="icons">
-								<li><a href="https://www.linkedin.com/in/anilshirasekar7/" class="fa-linkedin">LinkedIn</a></li>
-								<li><a href="https://about.me/anilshirasekar7" class="fa-external-link">AboutMe</a></li>
-							</ul>
-						</footer>
-					</section>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: { 950:'#0A0E14', 900:'#0F141C', 850:'#121924', 800:'#161D28', 700:'#1F2836' },
+          gold: { 300:'#EBD3A0', 400:'#E0BC72', 500:'#D4A853', 600:'#B8862F' },
+          cream: '#EDEAE3',
+          mist: '#9AA3AF'
+        },
+        fontFamily: {
+          display: ['Fraunces','Georgia','serif'],
+          sans: ['Inter','system-ui','sans-serif']
+        }
+      }
+    }
+  }
+</script>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>&copy; <a href="mailto:anilshirasekar7@gmail.com">email me</a></li>
-							<!--<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
-						</ul>
-					</footer>
+<style>
+  ::selection { background:#D4A853; color:#0A0E14; }
+  html { scrollbar-color:#1F2836 #0A0E14; }
 
-			</div>
+  [data-reveal] { opacity:0; transform:translateY(26px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+  [data-reveal].revealed { opacity:1; transform:none; }
 
-		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-			<script>
-				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-				}
-			</script>
+  .gold-text {
+    background: linear-gradient(100deg,#EBD3A0 0%, #D4A853 45%, #B8862F 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .flight-path { stroke-dasharray: 6 10; animation: drift 26s linear infinite; }
+  .flight-path.slow  { animation-duration: 40s; }
+  @keyframes drift { to { stroke-dashoffset:-560; } }
 
-	</body>
+  .plane {
+    offset-path: path("M -60 470 C 380 120, 900 40, 1500 250");
+    offset-rotate: auto;
+    animation: fly 22s linear infinite;
+  }
+  @keyframes fly { from { offset-distance:0%; } to { offset-distance:100%; } }
+
+  .pulse-dot { position:relative; }
+  .pulse-dot::after {
+    content:""; position:absolute; inset:-4px; border-radius:9999px;
+    border:1px solid #D4A853; opacity:.6; animation:ping 2.2s cubic-bezier(0,0,.2,1) infinite;
+  }
+  @keyframes ping { 0%{transform:scale(.6);opacity:.7;} 80%,100%{transform:scale(1.9);opacity:0;} }
+
+  .card-hover { transition: transform .4s cubic-bezier(.2,.7,.2,1), border-color .4s, box-shadow .4s; }
+  .card-hover:hover { transform: translateY(-4px); border-color: rgba(212,168,83,.45); box-shadow: 0 18px 50px -20px rgba(212,168,83,.25); }
+
+  .nav-scrolled { background: rgba(10,14,20,.82); backdrop-filter: blur(14px); border-color: rgba(212,168,83,.14); }
+  .dot-grid { background-image: radial-gradient(rgba(212,168,83,.14) 1px, transparent 1px); background-size: 26px 26px; }
+</style>
+</head>
+
+<body class="bg-ink-950 text-cream font-sans antialiased overflow-x-hidden">
+
+<!-- ================= NAV ================= -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 border-b border-transparent">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3 group">
+      <span class="w-9 h-9 rounded-lg border border-gold-500/40 bg-ink-800 grid place-items-center font-display text-gold-400 text-sm tracking-widest group-hover:border-gold-500/80 transition">AS</span>
+      <span class="font-display text-lg tracking-wide text-cream/90">Anil Shirasekar</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+      <a href="#work" class="hover:text-gold-300 transition">Work</a>
+      <a href="#stack" class="hover:text-gold-300 transition">Stack</a>
+      <a href="#journey" class="hover:text-gold-300 transition">Journey</a>
+    </nav>
+    <a href="https://www.linkedin.com/in/anilshirasekar7" target="_blank" rel="noopener"
+       class="text-sm font-medium px-4 py-2 rounded-full border border-gold-500/40 text-gold-300 hover:bg-gold-500/10 hover:border-gold-500/70 transition">
+      Connect
+    </a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="top" class="relative min-h-screen flex items-center pt-16">
+  <!-- background -->
+  <div class="absolute inset-0 dot-grid opacity-40" aria-hidden="true"></div>
+  <div class="absolute -top-40 right-[-10%] w-[42rem] h-[42rem] rounded-full opacity-25 blur-3xl"
+       style="background:radial-gradient(circle, rgba(212,168,83,.35), transparent 65%);" aria-hidden="true"></div>
+
+  <svg class="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path class="flight-path" d="M -60 470 C 380 120, 900 40, 1500 250" stroke="#D4A853" stroke-opacity=".35" stroke-width="1.2"/>
+    <path class="flight-path slow" d="M -80 560 C 420 300, 1000 260, 1520 430" stroke="#D4A853" stroke-opacity=".18" stroke-width="1"/>
+    <path d="M -80 300 C 500 80, 1100 120, 1520 120" stroke="#D4A853" stroke-opacity=".08" stroke-width="1"/>
+    <circle cx="330" cy="253" r="3" fill="#D4A853" fill-opacity=".5"/>
+    <circle cx="880" cy="105" r="3" fill="#D4A853" fill-opacity=".35"/>
+    <circle cx="1240" cy="212" r="3" fill="#D4A853" fill-opacity=".5"/>
+    <g class="plane" opacity=".65">
+      <path d="M2 8 L20 4 L8 8 L20 12 Z" fill="#E0BC72"/>
+    </g>
+  </svg>
+
+  <div class="relative max-w-6xl mx-auto px-6 py-24">
+    <div class="inline-flex items-center gap-3 text-xs tracking-[0.2em] uppercase text-mist mb-8" data-reveal>
+      <span class="pulse-dot w-1.5 h-1.5 rounded-full bg-gold-400"></span>
+      Pune, India &nbsp;·&nbsp; JPMorgan Chase &amp; Co.
+    </div>
+
+    <h1 class="font-display text-5xl md:text-7xl font-medium tracking-tight leading-[1.02]" data-reveal>
+      Anil<br class="md:hidden" /> <span class="gold-text">Shirasekar</span>
+    </h1>
+
+    <p class="font-display italic text-xl md:text-2xl text-gold-300/90 mt-6 max-w-2xl" data-reveal>
+      SVP of Software Engineering — Travel Platform.
+    </p>
+
+    <p class="text-mist text-base md:text-lg leading-relaxed max-w-2xl mt-6" data-reveal>
+      I build engineering organizations that deliver at scale — and evolve faster than the
+      problems they solve. Fifteen years of hands-on engineering now point one direction:
+      making a consumer-scale travel platform, serving millions of users, genuinely intelligent.
+    </p>
+
+    <div class="flex flex-wrap items-center gap-4 mt-10" data-reveal>
+      <a href="https://www.linkedin.com/in/anilshirasekar7" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold-500 text-ink-950 font-semibold text-sm hover:bg-gold-400 transition shadow-[0_10px_40px_-12px_rgba(212,168,83,.6)]">
+        Connect on LinkedIn
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8m9 0v9"/></svg>
+      </a>
+      <a href="#work" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-ink-700 text-cream/85 text-sm hover:border-gold-500/50 hover:text-gold-300 transition">
+        What I'm building
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m0 0l-6-6m6 6l6-6"/></svg>
+      </a>
+    </div>
+
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-ink-700/60 border border-ink-700/60 rounded-2xl overflow-hidden max-w-3xl" data-reveal>
+      <div class="bg-ink-900/90 p-5">
+        <div class="font-display text-3xl gold-text">15+</div>
+        <div class="text-xs text-mist mt-1 tracking-wide uppercase">Years of experience</div>
+      </div>
+      <div class="bg-ink-900/90 p-5">
+        <div class="font-display text-3xl gold-text">Millions</div>
+        <div class="text-xs text-mist mt-1 tracking-wide uppercase">Users served</div>
+      </div>
+      <div class="bg-ink-900/90 p-5">
+        <div class="font-display text-3xl gold-text">Web + Mobile</div>
+        <div class="text-xs text-mist mt-1 tracking-wide uppercase">Consumer platform</div>
+      </div>
+      <div class="bg-ink-900/90 p-5">
+        <div class="font-display text-3xl gold-text">AWS</div>
+        <div class="text-xs text-mist mt-1 tracking-wide uppercase">Cloud-native</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORK ================= -->
+<section id="work" class="relative py-28">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-end justify-between flex-wrap gap-4 mb-14" data-reveal>
+      <div>
+        <div class="text-xs tracking-[0.25em] uppercase text-gold-400 mb-3">01 — What I do</div>
+        <h2 class="font-display text-4xl md:text-5xl font-medium tracking-tight">Three forces, one direction</h2>
+      </div>
+      <p class="text-mist text-sm max-w-sm leading-relaxed">Operating at the intersection of large-scale distributed systems, AI-driven product innovation, and regulated financial services.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="card-hover bg-ink-850 border border-ink-700 rounded-2xl p-7" data-reveal>
+        <div class="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/25 grid place-items-center text-gold-400 mb-5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l9 16H3l9-16zM12 9v5m0 3.5v.01"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-cream mb-3">Leading the Travel Platform</h3>
+        <p class="text-mist text-sm leading-relaxed">
+          Engineering for a customer-facing flight-booking platform on AWS — a high-throughput
+          consumer product across web and mobile, where reliability and personalization
+          directly impact revenue and customer trust.
+        </p>
+      </article>
+
+      <article class="card-hover bg-ink-850 border border-ink-700 rounded-2xl p-7 relative" data-reveal style="transition-delay:.1s">
+        <span class="absolute top-6 right-6 text-[10px] tracking-widest uppercase text-gold-400 border border-gold-500/30 rounded-full px-2.5 py-1">Now</span>
+        <div class="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/25 grid place-items-center text-gold-400 mb-5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.8 15.2A6 6 0 0019.5 8a5 5 0 00-9-3.5A6 6 0 006 14.7M12 22a4 4 0 004-4m-8 0a4 4 0 004 4M12 10v6m-3-3h6"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-cream mb-3">Driving AI Adoption</h3>
+        <p class="text-mist text-sm leading-relaxed">
+          GitHub Copilot integration with measurable productivity outcomes; partnering with
+          JPMC's internal AI/ML platform to ship natural-language search, personalized
+          recommendations, and disruption management — with synthetic testing protecting
+          core booking flows at scale.
+        </p>
+      </article>
+
+      <article class="card-hover bg-ink-850 border border-ink-700 rounded-2xl p-7" data-reveal style="transition-delay:.2s">
+        <div class="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/25 grid place-items-center text-gold-400 mb-5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h10M4 7l-1 5m1 0h10"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-cream mb-3">Engineering at Scale</h3>
+        <p class="text-mist text-sm leading-relaxed">
+          A foundation of 15 hands-on years: highly scalable RESTful APIs, distributed systems,
+          and micro-frontend / microservices architectures — the technical depth that makes
+          architectural trade-offs translate into business outcomes.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STACK ================= -->
+<section id="stack" class="py-28 bg-ink-900/50 border-y border-ink-800">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-14" data-reveal>
+      <div class="text-xs tracking-[0.25em] uppercase text-gold-400 mb-3">02 — The stack</div>
+      <h2 class="font-display text-4xl md:text-5xl font-medium tracking-tight">Tools of the trade</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-ink-850/60 border border-ink-700 rounded-2xl p-6" data-reveal>
+        <div class="text-xs tracking-widest uppercase text-mist mb-4">Languages &amp; Runtimes</div>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">.NET</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">C#</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">Java</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">TypeScript</span>
+        </div>
+      </div>
+      <div class="bg-ink-850/60 border border-ink-700 rounded-2xl p-6" data-reveal style="transition-delay:.08s">
+        <div class="text-xs tracking-widest uppercase text-mist mb-4">Frameworks &amp; Frontend</div>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">ASP.NET Core</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">Web API</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">Angular</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">EF Core</span>
+        </div>
+      </div>
+      <div class="bg-ink-850/60 border border-ink-700 rounded-2xl p-6" data-reveal style="transition-delay:.16s">
+        <div class="text-xs tracking-widest uppercase text-mist mb-4">Distributed Data</div>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">SQL Server</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">Redis</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">Elasticsearch</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">Cassandra</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">Aerospike</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">DynamoDB</span>
+        </div>
+      </div>
+      <div class="bg-ink-850/60 border border-ink-700 rounded-2xl p-6" data-reveal style="transition-delay:.24s">
+        <div class="text-xs tracking-widest uppercase text-mist mb-4">Messaging &amp; Cloud</div>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">Kafka</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">RabbitMQ</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">AWS</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">Cloud-native</span>
+        </div>
+      </div>
+      <div class="bg-ink-850/60 border border-ink-700 rounded-2xl p-6 sm:col-span-2 lg:col-span-2" data-reveal style="transition-delay:.32s">
+        <div class="text-xs tracking-widest uppercase text-mist mb-4">Quality &amp; AI</div>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">xUnit</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">Moq</span>
+          <span class="px-3 py-1.5 rounded-full bg-ink-800 border border-ink-700 text-cream/85 hover:border-gold-500/40 transition cursor-default">Jest</span>
+          <span class="px-3 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-300 cursor-default">GitHub Copilot</span>
+          <span class="px-3 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-300 cursor-default">Synthetic Testing</span>
+          <span class="px-3 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-300 cursor-default">Intelligent Travel Features</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUOTE ================= -->
+<section class="relative py-28 overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50rem] h-[50rem] rounded-full opacity-15 blur-3xl"
+       style="background:radial-gradient(circle, rgba(212,168,83,.5), transparent 60%);" aria-hidden="true"></div>
+  <div class="relative max-w-4xl mx-auto px-6 text-center" data-reveal>
+    <div class="font-display text-6xl gold-text leading-none mb-6 select-none">"</div>
+    <blockquote class="font-display text-2xl md:text-4xl leading-snug text-cream/95 tracking-tight">
+      The engineering leaders who will matter most over the next five years are those who
+      understand their systems deeply enough to know <span class="gold-text italic">what AI can replace</span>
+      — and <span class="gold-text italic">what still requires human judgment</span>.
+    </blockquote>
+    <p class="text-mist text-sm mt-8 tracking-[0.2em] uppercase">— Anil Shirasekar</p>
+  </div>
+</section>
+
+<!-- ================= JOURNEY ================= -->
+<section id="journey" class="py-28 bg-ink-900/50 border-y border-ink-800">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-14" data-reveal>
+      <div class="text-xs tracking-[0.25em] uppercase text-gold-400 mb-3">03 — The journey</div>
+      <h2 class="font-display text-4xl md:text-5xl font-medium tracking-tight">From first commit to consumer scale</h2>
+    </div>
+
+    <div class="relative pl-8 md:pl-12">
+      <div class="absolute left-2.5 md:left-4 top-2 bottom-2 w-px bg-gradient-to-b from-gold-500/60 via-ink-700 to-transparent" aria-hidden="true"></div>
+
+      <div class="relative space-y-12">
+        <div class="relative" data-reveal>
+          <span class="absolute -left-8 md:-left-12 top-1.5 w-5 h-5 rounded-full border-2 border-gold-400 bg-ink-950" style="margin-left:10px"></span>
+          <div class="text-xs tracking-widest uppercase text-gold-400">2026 — Present</div>
+          <h3 class="font-display text-2xl text-cream mt-2">Senior Software Engineering Manager <span class="text-mist text-base font-sans">(SVP)</span></h3>
+          <div class="text-mist text-sm mt-1">JPMorgan Chase · Travel Platform · Pune, India</div>
+          <p class="text-mist text-sm leading-relaxed mt-3 max-w-2xl">
+            Leading engineering for the customer-facing travel flight-booking platform (web and mobile)
+            hosted on AWS — a high-throughput consumer product where reliability and personalization
+            directly impact revenue and customer trust.
+          </p>
+        </div>
+
+        <div class="relative" data-reveal>
+          <span class="absolute -left-8 md:-left-12 top-1.5 w-5 h-5 rounded-full border-2 border-ink-700 bg-ink-950" style="margin-left:10px"></span>
+          <div class="text-xs tracking-widest uppercase text-mist">2023 — 2026</div>
+          <h3 class="font-display text-2xl text-cream mt-2">VP, Engineering Manager</h3>
+          <div class="text-mist text-sm mt-1">JPMorgan Chase · Retail &amp; Loyalty Travel (cxLoyalty)</div>
+          <p class="text-mist text-sm leading-relaxed mt-3 max-w-2xl">
+            Building highly scalable RESTful and web applications for the retail and loyalty travel
+            domain using .NET and a modern cloud stack.
+          </p>
+        </div>
+
+        <div class="relative" data-reveal>
+          <span class="absolute -left-8 md:-left-12 top-1.5 w-5 h-5 rounded-full border-2 border-ink-700 bg-ink-950" style="margin-left:10px"></span>
+          <div class="text-xs tracking-widest uppercase text-mist">Earlier</div>
+          <h3 class="font-display text-2xl text-cream mt-2">Engineering Leadership — Tavisca, a cxLoyalty Technology Platform <span class="text-mist text-base font-sans">(a division of JP Morgan Chase &amp; Co.)</span></h3>
+          <p class="text-mist text-sm leading-relaxed mt-3 max-w-2xl">
+            Guiding cross-functional teams in architecting microservices and micro-frontends with
+            C#, ASP.NET Core, and Angular — high-throughput distributed systems on RabbitMQ and Kafka,
+            across Aerospike, Cassandra, Redis, and Elasticsearch.
+          </p>
+        </div>
+
+        <div class="relative" data-reveal>
+          <span class="absolute -left-8 md:-left-12 top-1.5 w-5 h-5 rounded-full border-2 border-ink-700 bg-ink-950" style="margin-left:10px"></span>
+          <div class="text-xs tracking-widest uppercase text-mist">Where it started</div>
+          <h3 class="font-display text-2xl text-cream mt-2">Software Engineer — Ansh Systems</h3>
+          <p class="text-mist text-sm leading-relaxed mt-3 max-w-2xl">
+            The beginning of fifteen years of hands-on engineering — the technical depth that still
+            grounds every leadership decision today.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4 text-xs text-mist">
+            <span class="px-3 py-1 rounded-full border border-ink-700">MCA</span>
+            <span class="px-3 py-1 rounded-full border border-ink-700">Pune, India</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="relative py-32 overflow-hidden">
+  <div class="absolute -bottom-48 left-1/2 -translate-x-1/2 w-[56rem] h-[56rem] rounded-full opacity-20 blur-3xl"
+       style="background:radial-gradient(circle, rgba(212,168,83,.4), transparent 60%);" aria-hidden="true"></div>
+  <div class="relative max-w-3xl mx-auto px-6 text-center" data-reveal>
+    <div class="text-xs tracking-[0.25em] uppercase text-gold-400 mb-4">Final approach</div>
+    <h2 class="font-display text-4xl md:text-6xl font-medium tracking-tight leading-tight">
+      Let's talk <span class="gold-text">scale, travel &amp; AI.</span>
+    </h2>
+    <p class="text-mist text-base md:text-lg leading-relaxed mt-6 max-w-xl mx-auto">
+      Open to connecting with engineering leaders, architects, and product innovators working at the
+      intersection of AI, platform engineering, and consumer-scale products.
+    </p>
+    <a href="https://www.linkedin.com/in/anilshirasekar7" target="_blank" rel="noopener"
+       class="inline-flex items-center gap-2 mt-10 px-8 py-4 rounded-full bg-gold-500 text-ink-950 font-semibold hover:bg-gold-400 transition shadow-[0_10px_40px_-12px_rgba(212,168,83,.6)]">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      LinkedIn — anilshirasekar7
+    </a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="border-t border-ink-800 py-10">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-mist">
+    <div class="flex items-center gap-3">
+      <span class="w-8 h-8 rounded-lg border border-gold-500/40 bg-ink-800 grid place-items-center font-display text-gold-400 text-xs tracking-widest">AS</span>
+      <span>© 2026 Anil Shirasekar</span>
+    </div>
+    <div class="text-mist/70 text-xs tracking-wide">Pune, India · Built with care — and a little gold.</div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+  // Nav background on scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('nav-scrolled', window.scrollY > 24);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>
+</body>
 </html>
